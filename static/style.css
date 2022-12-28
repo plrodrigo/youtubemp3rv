@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Permanent+Marker', sans-serif;
+}
+
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #222;
+}
+
+.banner {
+  position: fixed; /* fija la posición del elemento */
+  top: 0; /* coloca el elemento en la parte superior de la pantalla */
+  left: 0; /* coloca el elemento a la izquierda de la pantalla */
+  width: 100%; /* ajusta el ancho del elemento al ancho de la pantalla */
+  z-index: 999; /* establece un índice de capa alto para asegurarse de que el elemento se muestre encima de otros elementos */
+  min-height: 20vh; /* mantiene el alto del elemento */
+  display: flex; /* permite utilizar la propiedad align-items para centrar el contenido verticalmente */
+  align-items: center; /* centra el contenido verticalmente */
+  justify-content: center; /* centra el contenido horizontalmente */
+  border-radius: 8px; /* mantiene el borde redondeado del elemento */
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+             inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+             5px 5px 15px rgba(0, 0, 0, 0.3),
+             -5px -5px 15px rgba(255, 255, 255, 0.1); /* mantiene la sombra del elemento */
+}
+
+.banner .title {
+  white-space: nowrap;
+  font-size: 6vw;
+  color: #fff;
+  text-shadow: 0 0 20px #FF3600;
+}
+
+
+.input-container {
+    position: fixed; /* fija la posición del elemento */
+    top: 50%; /* coloca el elemento en la mitad de la pantalla */
+    left: 50%; /* coloca el elemento en el centro de la pantalla */
+    flex-direction: column;
+    transform: translate(-50%, -50%); /* centra el elemento horizontal y verticalmente */
+    min-height: 6vh; /* mantiene el alto del elemento */
+    width: 60%; /* ajusta el ancho del elemento al ancho del elemento banner */
+    display: flex; /* permite utilizar la propiedad align-items para centrar el contenido verticalmente */
+    align-items: center; /* centra el contenido verticalmente */
+    justify-content: center; /* centra el contenido horizontalmente */
+    border-radius: 8px; /* mantiene el borde redondeado del elemento */
+    
+}
+
+
+.input-container .input::placeholder {
+    text-align: center; /* centra el texto dentro del elemento input */
+}
+
+.input-container .input {
+    text-align: center; /* centra el texto dentro del elemento input */
+    width: 100%; /* ajusta el ancho del elemento al ancho del elemento input-container */
+    height: 50px; /* establece el alto del elemento */
+    font-size: 20px; /* ajusta el tamaño de la fuente */
+    padding: 0 20px; /* ajusta el espacio interno del elemento */
+    border: none; /* elimina el borde del elemento */
+    border-radius: 8px; /* mantiene el borde redondeado del elemento */
+    background-color: #222; /* mantiene el color de fondo del elemento */
+    color: #fff; /* mantiene el color de la fuente del elemento */
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+               inset -5px -5px 15px rgba(125, 34, 34, 0.1),
+               5px 5px 15px rgba(208, 29, 29, 0.3),
+               -5px -5px 15px rgba(255, 255, 255, 0.1);
+    outline: none; /* elimina el borde resaltado del elemento cuando se selecciona */
+}
+
+.input-container .button {
+    text-align: center;
+    margin-top: 40px; /* añade un margen superior al elemento */
+    width: 40%; /* ajusta el ancho del elemento al ancho del elemento input-container */
+    height: 50px; /* establece el alto del elemento */
+    font-size: 18px; /* ajusta el tamaño de la fuente */
+    padding: 0 20px; /* ajusta el espacio interno del elemento */
+    border: none; /* elimina el borde del elemento */
+    border-radius: 8px; /* mantiene el borde redondeado del elemento */
+    background-color: rgb(172, 36, 36); /* mantiene el color de fondo del elemento */
+    color: #fff; /* mantiene el color de la fuente del elemento */
+    box-shadow: inset 5px 5px 5px rgba(201, 41, 41, 0.2),
+               inset -5px -5px 15px rgba(155, 42, 42, 0.1),
+               5px 5px 15px rgba(159, 47, 47, 0.3),
+               -5px -5px 15px rgba(125, 19, 19, 0.1);
+    outline: none; /* elimina el borde resaltado del elemento cuando se selecciona */
+    text-align: center; /* centra el texto del elemento */
+}
+
+.input-container .button:hover {
+  transform: scale(0.90);
+}
+
+#progress {
+  background-color: blue; /* Establece el color de fondo de la barra */
+  width: 50%; /* Establece el ancho de la barra */
+  border: 1px solid black; /* Establece el borde de la barra */
+}
+
+
+#progress::-webkit-progress-value {
+  color: white; /* Establece el color del texto */
+}
+

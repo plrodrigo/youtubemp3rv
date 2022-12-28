@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descarga Audio 320kbps RV</title>
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  
+  
+  <script>
+    window.addEventListener('load', function(event) {
+      var progreso = document.getElementById('progress');
+      progreso.value = 100;
+      console.log('Progres: ' + progreso.value + '%');
+      setTimeout(function() {
+       progreso.value = 0;
+       
+      }, 3000); // resetear la barra de progreso después de 1 segundo (1000 milisegundos)
+});
+  </script>
+  
+  
+
+</head>
+<body>
+  <div class="banner">
+    <div class="title-container">
+      <h1 class="title" data-text="Youtube Download"><i class="fa fa-music"></i> Youtube MP3</h1>
+    </div>
+  </div>
+
+  <form action="{{ url_for('download') }}" method="post">
+    <div class="input-container">
+      <input type="text" class="input" name="video_url" placeholder="Ingresa la URL del video" required>
+      <button type="submit" class="button">Descargar</button>
+      
+    </div>
+
+    
+
+    
+  </form>
+
+  <progress id="progress" value="0" max="100"></progress>
+
+  
+</body>
+
+</html>
+
